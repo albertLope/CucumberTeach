@@ -13,9 +13,9 @@ Feature: Item categories functionality
     Then Success message should be displayed
 
     Examples:
-      |Item categories name|Item categories user type|
-      | name1            | UserTypeOption_TenantAdmin     |
-      | name2            | UserTypeOption_User     |
-      | name3            | UserTypeOption_Guest     |
-      | name4            | UserTypeOption_Everyone     |
+      | Item categories name | Item categories user type  |
+      | name1                | UserTypeOption_TenantAdmin |
+      | name2                | UserTypeOption_User        |
+      | name3                | UserTypeOption_Guest       |
+      | name4                | UserTypeOption_Everyone    |
 

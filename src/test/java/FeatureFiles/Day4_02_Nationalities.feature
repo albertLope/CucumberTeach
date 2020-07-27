@@ -2,7 +2,6 @@ Feature: Nationalities functionality
 
   @regression
   Scenario: Create Nationalities
-
     Given Navigate to basqar
     And Enter the username and password click on login button
     Then User should be able to login successfully
@@ -12,7 +11,6 @@ Feature: Nationalities functionality
 
   @regression
   Scenario: Edit Nationalities
-
     Given Navigate to basqar
     And Enter the username and password click on login button
     Then User should be able to login successfully
@@ -29,6 +27,5 @@ Feature: Nationalities functionality
     And Navigate to Nationalities page
     And Delete name in the "second" position the "Alish"
     Then Success message should be displayed
-
 
 

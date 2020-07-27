@@ -220,11 +220,8 @@ public class FormPages extends _01_ParentClass {
             case "SaveButtonPopUp":
                 myElement = SaveButtonPopUp;
                 break;
-
         }
-
         clickFunction(myElement);
-
     }
 
     public void findTheElementFromThePageAndSendKeys(String elementName ,String value){
@@ -261,9 +258,7 @@ public class FormPages extends _01_ParentClass {
                 myElement = contactInfo;
                 break;
 
-
         }
-
         sendKeysFunction(myElement , value);
     }
 

@@ -19,7 +19,10 @@ public class Day2_01_LoginFunctionality {
     @Given("^Navigate to basqar$")
     public void navigate_to_basqar() throws Throwable {
 
-        driver = DriverClass.getDriver();
+//        driver = DriverClass.getDriver();
+
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
 
         driver.get("https://test.basqar.techno.study/");
         driver.manage().window().maximize();
