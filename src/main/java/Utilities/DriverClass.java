@@ -18,6 +18,7 @@ public class DriverClass {
         }
 
         return driver;
+
     }
 
     public static void quitDriver() {

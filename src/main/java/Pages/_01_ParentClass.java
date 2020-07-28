@@ -57,6 +57,7 @@ public class _01_ParentClass {
 
         waitUntilVisibility(element);
         Assert.assertTrue(element.getText().contains(text) , "element text is " + element.getText());
+
     }
 
     public void clickOnButtonAccordingToName(List<WebElement> listname , List<WebElement> Button , String expectedName){
@@ -80,6 +81,20 @@ public class _01_ParentClass {
 
         //This will scroll the page till the element is found
         js.executeScript("arguments[0].scrollIntoView();", elementToScroll);
+    }
+
+    public void clickOnElementFromTheList(List<WebElement> listOfElements , String text){
+
+        for (WebElement eachElement : listOfElements){
+
+            if(eachElement.getText().equalsIgnoreCase(text)){
+
+                eachElement.click();
+                break;
+
+            }
+        }
+
     }
 
 }

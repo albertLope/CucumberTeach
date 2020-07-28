@@ -59,6 +59,12 @@ public class CountryPage extends _01_ParentClass {
     @FindBy(xpath="//ms-text-field[@formcontrolname='description']/input")
     private WebElement Description;
 
+    @FindBy(xpath="//span[text()='Subjects']")
+    private WebElement Subjects;
+
+    @FindBy(xpath="//span[text()='Subject Category']")
+    private WebElement Subject_Category_dropdown;
+
     @FindBy(xpath="//mat-chip-list[@focused='unFocus']//input")
     private WebElement UserType;
 
@@ -97,6 +103,11 @@ public class CountryPage extends _01_ParentClass {
     })
     private List<WebElement> ListOfDelete;
 
+    @FindAll({
+            @FindBy(xpath="//span[@class='mat-option-text']")
+    })
+    private List<WebElement> DropdownOptionsList;
+
     WebElement myElement;
 
     public void verifyElementContainTheText(String elementName , String text){
@@ -108,6 +119,10 @@ public class CountryPage extends _01_ParentClass {
             case "ErrorMessage":
                 myElement = ErrorMessage;
                 break;
+            case "Subjects":
+                myElement = Subjects;
+                break;
+
 
 
         }
@@ -148,6 +163,9 @@ public class CountryPage extends _01_ParentClass {
                 break;
             case "UserType":
                 myElement = UserType;
+                break;
+            case "Subject_Category_dropdown":
+                myElement = Subject_Category_dropdown;
                 break;
 
         }
@@ -212,6 +230,21 @@ public class CountryPage extends _01_ParentClass {
 
         clickOnButtonAccordingToName(list1 , list2 , value);
 
+    }
+
+    public void FindTheListAndClickOnExpectedElement(String listName , String expectedElement){
+
+
+        List<WebElement> listOfObjects = new ArrayList<>();
+
+        switch (listName){
+            case "DropdownOptionsList":
+                listOfObjects=DropdownOptionsList;
+            break;
+
+        }
+
+        clickOnElementFromTheList(listOfObjects , expectedElement);
     }
 
 
