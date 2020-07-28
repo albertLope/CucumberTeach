@@ -26,6 +26,7 @@ public class _01_ParentClass {
 
         waitUntilClickable(elementToClick);
 
+        System.out.println(elementToClick.getText());
         scrollToElement(elementToClick);
         elementToClick.click();
 

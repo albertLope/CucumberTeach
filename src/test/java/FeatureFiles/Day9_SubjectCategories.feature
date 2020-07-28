@@ -36,11 +36,17 @@ Feature: Subject Categories functionality
     Then User should be able to login successfully
     And Navigate to Subject Categories page
 #    Country also has the name and code so we can use same code
-    When Create a country name is "Subject name1" code is "Subject code1"
+    When Create a country name is "SubjectCategories name1" code is "Subject code1"
     Then Success message should be displayed
-    And Navigate to Subjects
-    When Create a subjects name is "Subject name1" code is "Subject code1" Subject Category is "Subject name1"
+    And Navigate to "Subjects"
+    When Create a subjects name is "Subjects name1" code is "Subject code1" Subject Category is "SubjectCategories name1"
     Then Success message should be displayed
-
-
-
+    And Navigate commands "back" , url should contain "subject-categories"
+    And Delete name in the "second" position the "SubjectCategories name1"
+    Then Error message should be displayed
+    And Navigate to "Subjects"
+    And Delete name in the "second" position the "Subjects name1"
+    Then Success message should be displayed
+    And Navigate commands "back" , url should contain "subject-categories"
+    And Delete name in the "second" position the "SubjectCategories name1"
+    Then Success message should be displayed

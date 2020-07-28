@@ -27,7 +27,7 @@ public class Day2_01_LoginFunctionality {
     }
 
     @Given("^Enter the username and password click on login button$")
-    public void enter_the_username_and_password_click_on_login_button() throws Throwable {
+    public void enter_the_username_and_password_click_on_login_button(){
 
         driver.findElement(By.id("mat-input-0")).sendKeys("daulet2030@gmail.com");
 
@@ -40,7 +40,7 @@ public class Day2_01_LoginFunctionality {
     }
 
     @Then("^User should be able to login successfully$")
-    public void user_should_be_able_to_login_successfully() throws Throwable {
+    public void user_should_be_able_to_login_successfully(){
 
         driver.findElement(By.xpath("//span[text()='Dashboard']")).isDisplayed();
 

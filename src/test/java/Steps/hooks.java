@@ -8,6 +8,6 @@ public class hooks {
     @After
     public void after(){
 
-//        DriverClass.quitDriver();
+        DriverClass.quitDriver();
     }
 }
