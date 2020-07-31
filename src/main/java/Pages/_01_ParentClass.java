@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.DriverClass;
+import Utilities.Day10_DriverClass;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,28 +17,23 @@ public class _01_ParentClass {
 
     public _01_ParentClass(){
 
-        driver= DriverClass.getDriver();
+        driver= Day10_DriverClass.GetDriver();
         wait = new WebDriverWait(driver,10);
 
     }
 
     public void clickFunction(WebElement elementToClick){
-
         waitUntilClickable(elementToClick);
-
         System.out.println(elementToClick.getText());
         scrollToElement(elementToClick);
         elementToClick.click();
-
     }
 
     public void sendKeysFunction(WebElement sendKeyElement , String value){
-
         waitUntilVisibility(sendKeyElement);
         scrollToElement(sendKeyElement);
         sendKeyElement.clear();
         sendKeyElement.sendKeys(value);
-
     }
 
     public void waitUntilVisibility(WebElement element){
@@ -96,6 +91,15 @@ public class _01_ParentClass {
             }
         }
 
+    }
+
+    public void scrollToLastElement(WebElement Element){
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
+        //This will scroll the page till the element is found
+        js.executeScript("arguments[0].scrollIntoView();", Element);
     }
 
 }

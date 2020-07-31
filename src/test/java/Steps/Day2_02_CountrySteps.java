@@ -49,6 +49,7 @@ public class Day2_02_CountrySteps {
     public void country_should_be_created_successfully() {
 
         countryPage.verifyElementContainTheText("successMessage","success");
+
     }
 
     @Then("^Error message should be displayed$")

@@ -29,11 +29,11 @@ import java.io.File;
         dryRun = false
 )
 
-public class Day_10_SmokeTestWithExtendReport extends AbstractTestNGCucumberTests {
+public class Day_9_SmokeTestWithExtendReport extends AbstractTestNGCucumberTests {
 
     @AfterClass
     public static void setup() {
-        Reporter.loadXMLConfig(new File("src\\test\\java\\features\\Day_10_extent_config.xml"));
+        Reporter.loadXMLConfig(new File("src\\test\\java\\FeatureFiles\\Day_10_extent_config.xml"));
         //Reporter.setSystemInfo("Test User", System.getProperty("user.name"));
         Reporter.setSystemInfo("User Name", "Ali Koklu");
         Reporter.setSystemInfo("Application Name", "Basqar ");

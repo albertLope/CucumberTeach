@@ -14,7 +14,6 @@ Feature: Entrance Student functionality
       | middleName     | A           |
       | documentNumber | 86579812358 |
 
-
     And Clicks in the new exam form
       | gender                    |
       | Option1                   |

@@ -30,16 +30,7 @@ public class Day9_01_SubjectCategoriesSteps {
 
         leftNav.findTheElementFromThePageAndClick(elementName);
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
-
-
-
-
 
     @When("^Create a subjects name is \"([^\"]*)\" code is \"([^\"]*)\" Subject Category is \"([^\"]*)\"$")
     public void create_a_subjects_name_is_code_is_Subject_Category_is(String name, String code, String subjectName){

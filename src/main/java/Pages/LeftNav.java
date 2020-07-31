@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.DriverClass;
+import Utilities.Day10_DriverClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +13,7 @@ public class LeftNav extends _01_ParentClass {
     //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public LeftNav(){
 
-        driver = DriverClass.getDriver();
+        driver = Day10_DriverClass.GetDriver();
         PageFactory.initElements( driver , this );
 
     }
@@ -24,50 +24,54 @@ public class LeftNav extends _01_ParentClass {
     @FindBy(xpath="//span[text()='Parameters']")
     private WebElement Parameters;
 
-    @FindBy(xpath=" //span[text()='Countries']")
+    @FindBy(xpath="//span[text()='Countries']")
     private WebElement Country;
 
-    @FindBy(xpath=" //span[text()='Citizenships']")
+    @FindBy(xpath="//span[text()='Citizenships']")
     private WebElement Citizenships;
 
-    @FindBy(xpath=" //span[text()='Nationalities']")
+    @FindBy(xpath="//span[text()='Nationalities']")
     private WebElement Nationalities;
 
-    @FindBy(xpath=" //span[text()='Fees']")
+    @FindBy(xpath="//span[text()='Fees']")
     private WebElement Fees;
 
-    @FindBy(xpath=" //span[text()='Discounts']")
+    @FindBy(xpath="//span[text()='Discounts']")
     private WebElement Discounts;
 
-    @FindBy(xpath="  //span[text()='Inventory']")
+    @FindBy(xpath="//span[text()='Inventory']")
     private WebElement InventoryMain;
 
     @FindBy(xpath="//fuse-nav-vertical-collapsable[contains(@class,'nav-item ng-star-inserted open')]//span[text()='Setup']")
     private WebElement SetupUnderTheInventory;
 
-    @FindBy(xpath="  //span[text()='Item Categories']")
+    @FindBy(xpath="//span[text()='Item Categories']")
     private WebElement Item_Categories;
 
-    @FindBy(xpath="  //span[text()='Entrance Exams']")
+    @FindBy(xpath="//span[text()='Entrance Exams']")
     private WebElement Entrance_ExamsDropdownMain;
 
     @FindBy(xpath="//fuse-nav-vertical-item[contains(@class,'inserted')]//span[text()='Entrance Exams']")
     private WebElement Entrance_ExamsButton;
 
-    @FindBy(xpath="  //span[text()='Student']")
+    @FindBy(xpath="//span[text()='Student']")
     private WebElement Student;
 
-    @FindBy(xpath="  //span[text()='Students']")
+    @FindBy(xpath="//span[text()='Students']")
     private WebElement Students;
 
-    @FindBy(xpath=" //span[text()='Education']")
+    @FindBy(xpath="//span[text()='Education']")
     private WebElement Education;
 
-    @FindBy(xpath=" //span[text()='Subject Categories']")
+    @FindBy(xpath="//span[text()='Subject Categories']")
     private WebElement Subject_Categories;
 
-    @FindBy(xpath=" //span[text()='Subjects']")
+    @FindBy(xpath="//span[text()='Subjects']")
     private WebElement Subjects;
+
+    @FindBy(xpath="//span[text()='Release Notes']")
+    private WebElement Release_Notes;
+
 
     WebElement myElement;
 
@@ -126,6 +130,10 @@ public class LeftNav extends _01_ParentClass {
             case "Subjects":
                 myElement = Subjects;
                 break;
+            case "Release_Notes":
+                myElement = Release_Notes;
+                break;
+
 
             default:
                 break;

@@ -1,5 +1,6 @@
 package Pages;
 
+import Utilities.Day10_DriverClass;
 import Utilities.DriverClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +19,7 @@ public class CountryPage extends _01_ParentClass {
 //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public CountryPage(){
 
-        driver = DriverClass.getDriver();
+        driver = Day10_DriverClass.GetDriver();
         PageFactory.initElements( driver , this );
 
     }
@@ -122,8 +123,6 @@ public class CountryPage extends _01_ParentClass {
             case "Subjects":
                 myElement = Subjects;
                 break;
-
-
 
         }
 
@@ -233,7 +232,6 @@ public class CountryPage extends _01_ParentClass {
     }
 
     public void FindTheListAndClickOnExpectedElement(String listName , String expectedElement){
-
 
         List<WebElement> listOfObjects = new ArrayList<>();
 
