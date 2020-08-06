@@ -43,15 +43,9 @@ public class Day2_GetMultipleDataFromExcelReusableMethod {
 
             row = sheet.getRow( i );
 
-            int cellCount= row.getLastCellNum();
+            cell = row.getCell( 1 );
 
-            for(int j = 0 ; j<cellCount ; j++){
-
-                cell = row.getCell( j );
-
-                allData.add( cell.toString() );
-
-            }
+            allData.add( cell.toString() );
 
         }
 

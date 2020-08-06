@@ -3,13 +3,11 @@ package Steps;
 import Pages.CountryPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Day3_01_CountryClass {
 
     CountryPage countryPage = new CountryPage();
-
 
     @When("^Create a country name is \"([^\"]*)\" code is \"([^\"]*)\"$")
     public void create_a_country_name_is_code_is(String name, String code) throws Throwable {

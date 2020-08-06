@@ -13,10 +13,7 @@ Feature: Discount functionality
     Then Success message should be displayed
 
     Examples:
-    |Discount name|integration_code|priority|
-    | name1            | code1     |1|
-    | name2            | code2     |1|
-    | name3            | code3     |1|
-
-
-
+      | Discount name | integration_code | priority |
+      | name1         | code1            | 1        |
+      | name2         | code2            | 1        |
+      | name3         | code3            | 1        |

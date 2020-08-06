@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.Day10_DriverClass;
+import Utilities.DriverClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +13,7 @@ public class LeftNav extends _01_ParentClass {
     //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public LeftNav(){
 
-        driver = Day10_DriverClass.GetDriver();
+        driver = DriverClass.getDriver();
         PageFactory.initElements( driver , this );
 
     }

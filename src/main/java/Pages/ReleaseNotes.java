@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.Day10_DriverClass;
+import Utilities.DriverClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +15,7 @@ public class ReleaseNotes extends _01_ParentClass{
 
     public ReleaseNotes(){
 
-        driver = Day10_DriverClass.GetDriver();
+        driver = DriverClass.getDriver();
         PageFactory.initElements( driver , this );
 
     }

@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.Day10_DriverClass;
+import Utilities.DriverClass;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,7 @@ public class _01_ParentClass {
 
     public _01_ParentClass(){
 
-        driver= Day10_DriverClass.GetDriver();
+        driver= DriverClass.getDriver();
         wait = new WebDriverWait(driver,10);
 
     }

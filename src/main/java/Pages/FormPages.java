@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class FormPages extends _01_ParentClass {
 
 
@@ -17,7 +14,7 @@ public class FormPages extends _01_ParentClass {
     //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public FormPages(){
 
-        driver = DriverClass.getDriver();
+        driver =DriverClass.getDriver();
         PageFactory.initElements( driver , this );
 
     }

@@ -1,10 +1,8 @@
 package Pages;
 
-import Utilities.Day10_DriverClass;
 import Utilities.DriverClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +17,7 @@ public class CountryPage extends _01_ParentClass {
 //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public CountryPage(){
 
-        driver = Day10_DriverClass.GetDriver();
+        driver = DriverClass.getDriver();
         PageFactory.initElements( driver , this );
 
     }
@@ -196,11 +194,10 @@ public class CountryPage extends _01_ParentClass {
                 myElement = Description;
                 break;
 
-
-
         }
 
         sendKeysFunction(myElement , value);
+
     }
 
     public void ClickOnTheButtonForTheElement(String position , String editOrDelete , String value) {

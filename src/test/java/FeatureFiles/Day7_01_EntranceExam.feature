@@ -15,7 +15,7 @@ Feature: Entrance Exam functionality
       | Academic_Period  |
       | Option_2019_2020 |
       | Grade_Level      |
-      | Option1           |
+      | Option1          |
       | DocumentType     |
       | Option1          |
       | AddButton        |
