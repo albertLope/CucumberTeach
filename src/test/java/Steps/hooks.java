@@ -13,8 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class hooks {
 
@@ -30,8 +28,18 @@ public class hooks {
 
         driver.findElement(By.id("mat-input-0")).sendKeys("daulet2030@gmail.com");
 
-        driver.findElement(By.id("mat-input-1")).sendKeys("DV@d9FjCm5hXeNFv");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.id("mat-input-1")).sendKeys("TechnoStudy123@");
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.findElement(By.xpath("//span[text()=' LOGIN ']")).click();
 
         driver.findElement(By.linkText("Got it!")).click();
@@ -46,30 +54,48 @@ public class hooks {
 
     @After
     public void after(Scenario scenario){
+//
+//        TakesScreenshot ScreenShot = ((TakesScreenshot)DriverClass.getDriver());
+//
+//        File srcFile = ScreenShot.getScreenshotAs( OutputType.FILE );
+//
+//        String featureFileName = scenario.getId();
+//
+//        Date now = new Date(  );
+//
+//        SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
+//
+//        String dateinString = formatter.format( now );
+//
+//        dateinString = dateinString.replace( ":" ,"," );
+//
+//        File destinationFile = new File("target/screenShots/"+featureFileName+dateinString+".png");
+//
+//        try {
+//            FileUtils.copyFile( srcFile, destinationFile );
+//        }catch(Exception e){
+//            System.out.println(e.getMessage());
+//        }
 
-        TakesScreenshot ScreenShot = ((TakesScreenshot)DriverClass.getDriver());
+        System.out.println(scenario.getStatus());
+        if(scenario.getStatus().contains("fail")) {
+            TakesScreenshot ScreenShot = ((TakesScreenshot) DriverClass.getDriver());
 
-        File srcFile = ScreenShot.getScreenshotAs( OutputType.FILE );
+            File srcFile = ScreenShot.getScreenshotAs(OutputType.FILE);
 
-        String featureFileName = scenario.getId();
+            String featureFileName = scenario.getId();
 
-        Date now = new Date(  );
+            File destinationFile = new File("target/screenShots/" + featureFileName + ".png");
 
-        SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
-
-        String dateinString = formatter.format( now );
-
-        dateinString = dateinString.replace( ":" ,"," );
-
-        File destinationFile = new File("target/screenShots/"+featureFileName+dateinString+".png");
-
-        try {
-            FileUtils.copyFile( srcFile, destinationFile );
-        }catch(Exception e){
-            System.out.println(e.getMessage());
+            try {
+                FileUtils.copyFile(srcFile, destinationFile);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
-
         DriverClass.quitDriver();
 
     }
 }
+
+// Background - Runner - Tags -

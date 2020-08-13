@@ -17,7 +17,7 @@ import java.io.File;
 //                if you need to run specific feature files then add tag here and in the
 //                  feature file then it will run those feature files
         tags = "@SmokeTest",
-//
+
 //                path for the my feature Files
         features = {"src/test/java/FeatureFiles"},
 
@@ -33,7 +33,7 @@ public class Day_9_SmokeTestWithExtendReport extends AbstractTestNGCucumberTests
 
     @AfterClass
     public static void setup() {
-        Reporter.loadXMLConfig(new File("src\\test\\java\\FeatureFiles\\Day_10_extent_config.xml"));
+        Reporter.loadXMLConfig(new File("src\\test\\java\\FeatureFiles\\Day9_extent_config.xml"));
         //Reporter.setSystemInfo("Test User", System.getProperty("user.name"));
         Reporter.setSystemInfo("User Name", "Ali Koklu");
         Reporter.setSystemInfo("Application Name", "Basqar ");

@@ -3,10 +3,13 @@ Feature: Entrance Student functionality
   @regression
   Scenario: Create Student categories
 
-    Given Navigate to basqar
-    And Enter the username and password click on login button
-    Then User should be able to login successfully
-    And Navigate to Students page
+#    Given Navigate to basqar
+#    And Enter the username and password click on login button
+#    Then User should be able to login successfully
+    And Clicks in the "CountryPage" form
+      | Student  |
+      | Students |
+
     And Click on add button
     And Send the keys in the new exam form
       | firstName      | Techno      |
@@ -14,11 +17,11 @@ Feature: Entrance Student functionality
       | middleName     | A           |
       | documentNumber | 86579812358 |
 
-    And Clicks in the new exam form
+    And Clicks in the "formPages" form
       | gender                    |
       | Option1                   |
       | Grade_Level               |
-      | Option1                   |
+      | Option3                   |
       | SchoolDepartment          |
       | Option2                   |
       | Section                   |

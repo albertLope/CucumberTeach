@@ -2,7 +2,6 @@ package RunnerClasses;
 
 
 import Utilities.Day10_DriverClass;
-import Utilities.Day10_DriverFactory;
 import com.cucumber.listener.Reporter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
@@ -54,7 +53,7 @@ public class Day_10_RunnerForParameters extends AbstractTestNGCucumberTests {
         //Reporter.setSystemInfo("Test User", System.getProperty("user.name"));
         Reporter.setSystemInfo("User Name", "Ali Koklu");
         Reporter.setSystemInfo("Application Name", "Basqar ");
-        Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name").toString());
+        Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name"));
         Reporter.setSystemInfo("Environment", "QA");
         Reporter.setTestRunnerOutput("Test Execution Cucumber Report");
     }

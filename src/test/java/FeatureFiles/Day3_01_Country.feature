@@ -2,6 +2,7 @@ Feature: Country functionality
 
 # Difference between today and day 2 is send the data from this page to step definition
 
+
   @regression
   Scenario: Create country
     And Navigate to country page

@@ -3,10 +3,8 @@ package Steps;
 import Utilities.DriverClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Day2_01_LoginFunctionality {
 
@@ -31,8 +29,17 @@ public class Day2_01_LoginFunctionality {
 
         driver.findElement(By.id("mat-input-0")).sendKeys("daulet2030@gmail.com");
 
-        driver.findElement(By.id("mat-input-1")).sendKeys("DV@d9FjCm5hXeNFv");
-
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.findElement(By.id("mat-input-1")).sendKeys("TechnoStudy123@");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.findElement(By.xpath("//span[text()=' LOGIN ']")).click();
 
         driver.findElement(By.linkText("Got it!")).click();

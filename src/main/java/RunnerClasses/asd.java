@@ -17,14 +17,13 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         features = {"src/test/java/FeatureFiles"},
 
 //                location of the step definitions
-        glue={"Steps"},
+        glue={"StepDefinition"},
 
 //                if the dry run is true it is making sure your feature files steps are
 //                  created in the step definition
-        dryRun = true
+        dryRun = false
 )
 
-public class _Day06_RegressionTestRunner extends AbstractTestNGCucumberTests {
+public class asd extends AbstractTestNGCucumberTests {
 
 }
-

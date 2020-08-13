@@ -11,12 +11,10 @@ public class Day3_01_CountryClass {
 
     @When("^Create a country name is \"([^\"]*)\" code is \"([^\"]*)\"$")
     public void create_a_country_name_is_code_is(String name, String code) throws Throwable {
-
         countryPage.findTheElementFromThePageAndClick("addButton");
         countryPage.findTheElementFromThePageAndSendKeys("nameInput" ,name);
         countryPage.findTheElementFromThePageAndSendKeys("codeInput" ,code);
         countryPage.findTheElementFromThePageAndClick("saveButton");
-
     }
 
     @Given("^Click on the edit button for position \"([^\"]*)\" name \"([^\"]*)\"$")

@@ -6,13 +6,14 @@ import Pages.LeftNav;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
 
 import java.util.List;
 
 public class Day07_01_EntranceExam {
 
     LeftNav leftNav = new LeftNav();
+
+
     CountryPage countryPage = new CountryPage();
     FormPages formPages = new FormPages();
 
@@ -54,21 +55,13 @@ public class Day07_01_EntranceExam {
 
     @And("^Clicks in the new exam form$")
     public void clicks_in_the_new_exam_form(DataTable Elements)  {
+
         List<String> elementNameAndValue = Elements.asList(String.class);
 
         for(int i = 0 ; i <elementNameAndValue.size();i++){
-
             System.out.println(elementNameAndValue.get(i));
             formPages.findTheElementFromThePageAndClick(elementNameAndValue.get(i));
-
-//            try {
-//                Thread.sleep(1000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
         }
     }
-
-
 
 }
