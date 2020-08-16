@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.DriverClass;
+import Utilities.DriverClassCopy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +15,7 @@ public class ReleaseNotes extends _01_ParentClass{
 
     public ReleaseNotes(){
 
-        driver = DriverClass.getDriver();
+        driver = DriverClassCopy.getDriver();
         PageFactory.initElements( driver , this );
 
     }
@@ -27,24 +27,7 @@ public class ReleaseNotes extends _01_ParentClass{
 
         scrollToLastElement(releaseNoteFromTheWebSite.get(releaseNoteFromTheWebSite.size()-1));
 
-        System.out.println("element name all elements -->>> "+elementName);
-        System.out.println(releaseNoteFromTheWebSite);
-        System.out.println("element name all elements -->>> "+elementName.size());
-        System.out.println(releaseNoteFromTheWebSite.size());
-
         for (int i = 0  ; i < releaseNoteFromTheWebSite.size(); i++){
-
-            System.out.println("webSite "+releaseNoteFromTheWebSite.get(i).getText());
-            System.out.println("Excel  "+elementName.get(i));
-
-
-        }
-
-        for (int i = 0  ; i < releaseNoteFromTheWebSite.size(); i++){
-
-            System.out.println("releaseNoteFromTheWebSite each -->> "+releaseNoteFromTheWebSite.get(i).getText());
-            System.out.println("Elemenet name each -->> "+elementName.get(i));
-
 
             Assert.assertEquals(releaseNoteFromTheWebSite.get(i).getText() , elementName.get(i));
 

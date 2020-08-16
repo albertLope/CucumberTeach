@@ -5,7 +5,7 @@
         <theme>standard</theme>
 
         <!-- document encoding -->  <!-- defaults to UTF-8 -->
-        <encoding>UTF-8</encoding>
+        <encoding>defaults</encoding>
 
         <!-- protocol for script and stylesheets -->   <!-- defaults to https -->
         <protocol>https</protocol>

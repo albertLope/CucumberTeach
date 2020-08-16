@@ -10,7 +10,7 @@ Feature: Fees functionality
     When Create a Fees name as "Techno studydish" code as "12345" integration code as "12" Priority as "7"
     Then Success message should be displayed
 
-  @regression
+  @regression @SmokeTest1
   Scenario: Edit Fees
 
     Given Navigate to basqar
@@ -21,7 +21,7 @@ Feature: Fees functionality
     And Edit the name as "Alish"
     Then Success message should be displayed
 
-  @regression
+  @regression @SmokeTest2
   Scenario: Delete Fees
 
     Given Navigate to basqar

@@ -45,7 +45,7 @@ public class Day1_02_GetMultipleDataFromExcel {
 
             row = sheet.getRow( i );
 
-            int cellCount= row.getLastCellNum();
+            int cellCount= row.getPhysicalNumberOfCells();
 
             for(int j = 0 ; j<cellCount ; j++){
 

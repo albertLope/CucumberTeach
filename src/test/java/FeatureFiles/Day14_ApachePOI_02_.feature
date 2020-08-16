@@ -1,5 +1,6 @@
 Feature: Release Notes
 
+#  @Apache
   Scenario: Verify release notes as expected
 
     Given Navigate to toolsQA

@@ -1,6 +1,6 @@
 package Steps;
 
-import Utilities.DriverClass;
+import Utilities.DriverClassCopy;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
@@ -17,7 +17,7 @@ public class Day2_01_LoginFunctionality {
     @Given("^Navigate to basqar$")
     public void navigate_to_basqar() throws Throwable {
 
-        driver = DriverClass.getDriver();
+        driver = DriverClassCopy.getDriver();
 
         driver.get("https://test.basqar.techno.study/");
         driver.manage().window().maximize();
@@ -50,6 +50,13 @@ public class Day2_01_LoginFunctionality {
     public void user_should_be_able_to_login_successfully(){
 
         driver.findElement(By.xpath("//span[text()='Dashboard']")).isDisplayed();
+
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
     }
 

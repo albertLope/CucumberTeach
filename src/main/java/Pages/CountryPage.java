@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.DriverClass;
+import Utilities.DriverClassCopy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -17,7 +17,7 @@ public class CountryPage extends _01_ParentClass {
 //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public CountryPage(){
 
-        driver = DriverClass.getDriver();
+        driver = DriverClassCopy.getDriver();
         PageFactory.initElements( driver , this );
 
     }

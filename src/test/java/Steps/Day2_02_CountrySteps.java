@@ -2,14 +2,11 @@ package Steps;
 
 import Pages.CountryPage;
 import Pages.LeftNav;
-import Utilities.DriverClass;
+import Utilities.DriverClassCopy;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Day2_02_CountrySteps {
 
@@ -27,7 +24,7 @@ public class Day2_02_CountrySteps {
     @And("^Navigate to country page$")
     public void navigate_to_country_page() throws InterruptedException {
 
-        driver = DriverClass.getDriver();
+        driver = DriverClassCopy.getDriver();
 
         leftNav.findTheElementFromThePageAndClick("setupOne");
         leftNav.findTheElementFromThePageAndClick("Parameters");

@@ -1,6 +1,6 @@
 package Pages;
 
-import Utilities.DriverClass;
+import Utilities.DriverClassCopy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,12 +13,12 @@ public class LeftNav extends _01_ParentClass {
     //    https://www.softwaretestinghelp.com/page-object-model-pom-with-pagefactory/#:~:text=The%20initElements%20is%20a%20static,java.lang.Class%20pageObjectClass)
     public LeftNav(){
 
-        driver = DriverClass.getDriver();
+        driver = DriverClassCopy.getDriver();
         PageFactory.initElements( driver , this );
 
     }
 
-    @FindBy(xpath="//span[text()='Setup']")
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
     private WebElement setupOne;
 
     @FindBy(xpath="//span[text()='Parameters']")
@@ -148,8 +148,6 @@ public class LeftNav extends _01_ParentClass {
         Validate -> Checking is your pom.xml file is created as expected is there any problem in the dependencies.
         Compile -> Compile of the source code of the project and test.
         Test -> Test the source code.
-
-
 
      */
 

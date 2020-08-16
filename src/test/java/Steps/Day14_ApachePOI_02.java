@@ -2,7 +2,7 @@ package Steps;
 
 import Utilities.Day2_GetMultipleDataFromExcelReusableMethod;
 import Utilities.Day2_GetSingleDataFromExcelReusableMethod;
-import Utilities.Day10_DriverClass;
+import Utilities.DriverClassCopy;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,7 +21,7 @@ public class Day14_ApachePOI_02 {
     @Given("^Navigate to toolsQA$")
     public void navigate_to_toolsQA(){
 
-        driver = Day10_DriverClass.GetDriver();
+        driver = DriverClassCopy.getDriver();
 
         driver.get("https://demoqa.com/text-box");
     }

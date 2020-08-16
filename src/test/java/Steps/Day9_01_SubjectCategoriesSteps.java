@@ -2,7 +2,7 @@ package Steps;
 
 import Pages.CountryPage;
 import Pages.LeftNav;
-import Utilities.DriverClass;
+import Utilities.DriverClassCopy;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -47,7 +47,7 @@ public class Day9_01_SubjectCategoriesSteps {
     @Then("^Navigate commands \"([^\"]*)\" , url should contain \"([^\"]*)\"$")
     public void navigate_commands_url_should_contain(String whichCommand, String WhichTextUrlShouldContain){
 
-        WebDriver driver = DriverClass.getDriver();
+        WebDriver driver = DriverClassCopy.getDriver();
 
         switch (whichCommand){
 

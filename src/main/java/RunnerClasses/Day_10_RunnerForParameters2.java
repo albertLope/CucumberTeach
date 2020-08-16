@@ -26,7 +26,7 @@ import java.io.File;
         },
 //                if you need to run specific feature files then add tag here and in the
 //                  feature file then it will run those feature files
-        tags = "@SmokeTest1",
+        tags = "@SmokeTest2",
 //
 //                path for the my feature Files
         features = {"src/test/java/FeatureFiles"},
@@ -41,7 +41,7 @@ import java.io.File;
 
 )
 
-public class Day_10_RunnerForParameters extends AbstractTestNGCucumberTests {
+public class Day_10_RunnerForParameters2 extends AbstractTestNGCucumberTests {
 
     @BeforeTest
     @Parameters("browser")
