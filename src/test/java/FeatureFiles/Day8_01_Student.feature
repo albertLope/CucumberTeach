@@ -3,9 +3,7 @@ Feature: Entrance Student functionality
   @regression
   Scenario: Create Student categories
 
-    Given Navigate to basqar
-    And Enter the username and password click on login button
-    Then User should be able to login successfully
+
     And Navigate to Students page
     And Click on add button
     And Send the keys in the new exam form

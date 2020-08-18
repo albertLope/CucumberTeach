@@ -3,9 +3,7 @@ Feature: Item categories functionality
   @regression
   Scenario Outline: Create Item categories
 
-    Given Navigate to basqar
-    And Enter the username and password click on login button
-    Then User should be able to login successfully
+
     And Navigate to Item Categories page
     When Create a Item categories name as "<Item categories name>" integration code as "<Item categories user type>"
     Then Success message should be displayed

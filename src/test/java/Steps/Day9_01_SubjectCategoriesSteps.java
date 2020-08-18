@@ -67,4 +67,6 @@ public class Day9_01_SubjectCategoriesSteps {
         wait.until(ExpectedConditions.urlContains(WhichTextUrlShouldContain));
 
     }
+
+
 }

@@ -1,4 +1,4 @@
-package Steps.StepDefinitionWithApache;
+package Steps;
 
 import Pages.LeftNav;
 import Pages.ReleaseNotes;
@@ -7,7 +7,7 @@ import cucumber.api.java.en.And;
 
 import java.util.List;
 
-public class Day14_ApachePOI {
+public class Day16_ApachePOI {
 
     LeftNav leftNav = new LeftNav();
     ReleaseNotes releaseNotes = new ReleaseNotes();

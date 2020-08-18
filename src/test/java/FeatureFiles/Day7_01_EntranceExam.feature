@@ -3,9 +3,7 @@ Feature: Entrance Exam functionality
   @regression
   Scenario: Create entrance exam categories
 
-    Given Navigate to basqar
-    And Enter the username and password click on login button
-    Then User should be able to login successfully
+
     And Navigate to Entrance exam page
     And Click on add button
     And Send the keys in the new exam form

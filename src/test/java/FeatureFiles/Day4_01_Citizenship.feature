@@ -1,13 +1,13 @@
 Feature: Citizenship functionality
 
-  @regression @SmokeTest
+  @regression  @SmokeTest
   Scenario: Create Citizenship
 
     And Navigate to Citizenship page
     When Create a Citizenship name as "Techno studydish" shortname as "Ts"
     Then Success message should be displayed
 
-  @regression @SmokeTest
+  @regression  @SmokeTest
   Scenario: Edit Citizenship
 
     And Navigate to Citizenship page

@@ -8,4 +8,6 @@
       And Navigate to Citizenship page
       And Create a citizenship with Apache POI
       And Success message should be displayed
+      And Delete a citizenship with Apache POI
+      And Success message should be displayed
 
