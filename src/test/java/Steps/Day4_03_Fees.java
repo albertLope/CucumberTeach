@@ -30,4 +30,11 @@ public class Day4_03_Fees {
         countryPage.findTheElementFromThePageAndClick("saveButton");
 
     }
+
+    @When("^Create a Fees name$")
+    public void createAFeesName() {
+
+//Create an excel for dialog content get all the data in there 
+
+    }
 }

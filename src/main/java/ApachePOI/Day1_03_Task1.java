@@ -55,17 +55,15 @@ public class Day1_03_Task1 {
             cell =  row.getCell( 0 );
 
             if(cell.toString().equalsIgnoreCase("password")){
+                int cellCount= row.getPhysicalNumberOfCells();
+                    for( int j = 1 ; j < cellCount ;j++){
 
-                cell =  row.getCell( 1 );
+                    cell =  row.getCell( j );
 
-                result = cell.toString();
-
-                break;
+                    result = cell.toString();
+                        System.out.println(result);
+                    }
             }
-
         }
-
-        System.out.println(result);
-
     }
 }

@@ -1,8 +1,8 @@
-package Steps;
+package Steps.StepDefinitionWithApache;
 
 import Pages.LeftNav;
 import Pages.ReleaseNotes;
-import Utilities.Day2_GetMultipleDataFromExcelReusableMethod;
+import Utilities.Day2_GetAllDataFromExcelReusableMethod;
 import cucumber.api.java.en.And;
 
 import java.util.List;
@@ -27,7 +27,7 @@ public class Day14_ApachePOI {
     @And("^Verify release notes as expected$")
     public void verify_release_notes_as_expected(){
 
-        List<String> releaseNotesFromExcel = Day2_GetMultipleDataFromExcelReusableMethod.reusableMethodForGetData("src/test/java/excelFiles/releaseNotes.xlsx" , "sheet1");
+        List<String> releaseNotesFromExcel = Day2_GetAllDataFromExcelReusableMethod.reusableMethodForGetData("src/test/java/excelFiles/releaseNotes.xlsx" , "sheet1");
 
         releaseNotes.checkReleaseNotes(releaseNotesFromExcel);
 

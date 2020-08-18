@@ -1,29 +1,21 @@
-package ApachePOI;
+package Utilities;
 
 import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Day1_04_Task2 {
+public class Day2_GetSecondRowDataFromExcel {
 
-
-     /*
-        First create a task excel in the excel files package.
-
-        Task2:
-                Print all the values in the task excel sheet.
-
-     */
-
-    public static void main(String[] args) {
-
-        String path = "src/test/java/excelFiles/task.xlsx";
+    public static List<String> reusableMethodForGetData(String pathOfTheExcel , String sheetName){
 
         FileInputStream inStream = null;
+
         try {
-            inStream = new FileInputStream( path );
+            inStream = new FileInputStream( pathOfTheExcel );
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -35,7 +27,9 @@ public class Day1_04_Task2 {
             e.printStackTrace();
         }
 
-        Sheet sheet = workbook.getSheet( "Sheet1" );
+        Sheet sheet = workbook.getSheet( sheetName );
+
+        System.out.println(sheet.getPhysicalNumberOfRows());
 
         int maxRow = sheet.getPhysicalNumberOfRows();
 
@@ -43,18 +37,19 @@ public class Day1_04_Task2 {
 
         Cell cell;
 
-        String result = "";
+        List<String> allData = new ArrayList<>(  );
 
         for(int i = 0 ; i<maxRow ; i++ ) {
 
             row = sheet.getRow( i );
 
-            cell =  row.getCell( 1 );
+            cell = row.getCell( 1 );
 
-            result = cell.toString();
+            allData.add( cell.toString() );
 
-            System.out.println(result);
         }
+
+        return allData;
 
     }
 }

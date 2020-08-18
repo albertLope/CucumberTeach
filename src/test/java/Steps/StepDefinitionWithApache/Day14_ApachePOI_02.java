@@ -1,6 +1,6 @@
-package Steps;
+package Steps.StepDefinitionWithApache;
 
-import Utilities.Day2_GetMultipleDataFromExcelReusableMethod;
+import Utilities.Day2_GetSecondRowDataFromExcel;
 import Utilities.Day2_GetSingleDataFromExcelReusableMethod;
 import Utilities.DriverClassCopy;
 import cucumber.api.java.en.And;
@@ -24,18 +24,20 @@ public class Day14_ApachePOI_02 {
         driver = DriverClassCopy.getDriver();
 
         driver.get("https://demoqa.com/text-box");
+        driver.manage().window().maximize();
+
     }
 
     @And("^Enter the data to website$")
     public void enter_the_data_to_website(){
 
-        driver.findElement(By.id("userName")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","FullName"));
+        driver.findElement(By.id("userName")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","Name"));
 
-        driver.findElement(By.id("userEmail")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","userEmail"));
+        driver.findElement(By.id("userEmail")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","Email"));
 
-        driver.findElement(By.id("currentAddress")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","currentAddress"));
+        driver.findElement(By.id("currentAddress")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","Address"));
 
-        driver.findElement(By.id("permanentAddress")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","permanentAddress"));
+        driver.findElement(By.id("permanentAddress")).sendKeys(Day2_GetSingleDataFromExcelReusableMethod.GetSingleDataFromExcel("src/test/java/excelFiles/toolsQAForm.xlsx", "Sheet1","Permananet Address"));
 
     }
 
@@ -51,16 +53,17 @@ public class Day14_ApachePOI_02 {
 
         List<WebElement> allResult = driver.findElements(By.className("mb-1"));
 
-        List<String> allDataFromExcel = Day2_GetMultipleDataFromExcelReusableMethod.reusableMethodForGetData("src/test/java/excelFiles/toolsQAForm.xlsx" , "Sheet1");
+        List<String> allDataFromExcel = Day2_GetSecondRowDataFromExcel.reusableMethodForGetData("src/test/java/excelFiles/toolsQAForm.xlsx" , "Sheet1");
 
         for(int i = 0 ;  i < allResult.size(); i++){
 
-            System.out.println(allResult.get(i).getText());
-            System.out.println(allDataFromExcel.get(i));
+            System.out.println(allResult.get(i).getText()+ " <-----allResult");
+            System.out.println(allDataFromExcel.get(i)+ " <-----allDataFromExcel");
 
             Assert.assertTrue(allResult.get(i).getText().contains(allDataFromExcel.get(i)));
 
         }
 
     }
+
 }

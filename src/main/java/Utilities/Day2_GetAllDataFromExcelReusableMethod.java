@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Day2_GetMultipleDataFromExcelReusableMethod {
+public class Day2_GetAllDataFromExcelReusableMethod {
 
 //      Second day of the Apache POI.
     public static List<String> reusableMethodForGetData(String pathOfTheExcel , String sheetName){

@@ -32,10 +32,10 @@ public class Day2_01_WriteInExcel {
 
         Row row = sheet.createRow( 0 );
 
-//            you need to create the each cell to write data in the excel
+//       you need to create the each cell to write data in the excel
         Cell cell = row.createCell( 0 );
 
-//            you need to create the each cell to write data in the excel
+//       you need to create the each cell to write data in the excel
 
         cell.setCellValue( "Hello world2");
 

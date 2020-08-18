@@ -1,6 +1,7 @@
 package Steps;
 
 import Utilities.DriverClassCopy;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
@@ -57,7 +58,12 @@ public class Day2_01_LoginFunctionality {
             e.printStackTrace();
         }
 
-
     }
 
+    @And("^Enter the username and password click on login button check result$")
+    public void enterTheUsernameAndPasswordClickOnLoginButtonCheckResult() {
+
+
+
+    }
 }
