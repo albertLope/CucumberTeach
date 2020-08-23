@@ -21,7 +21,7 @@ public class Day2_01_WriteInExcel {
         }
 
         Workbook workbook = null;
-
+        
         try{
             workbook = WorkbookFactory.create( inStream );
         }catch(Exception e){
@@ -36,7 +36,6 @@ public class Day2_01_WriteInExcel {
         Cell cell = row.createCell( 0 );
 
 //       you need to create the each cell to write data in the excel
-
         cell.setCellValue( "Hello world2");
 
 //            save the changes

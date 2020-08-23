@@ -28,12 +28,15 @@ public class ReleaseNotes extends _01_ParentClass{
         scrollToLastElement(releaseNoteFromTheWebSite.get(releaseNoteFromTheWebSite.size()-1));
 
         for (int i = 0  ; i < releaseNoteFromTheWebSite.size(); i++){
-
             Assert.assertEquals(releaseNoteFromTheWebSite.get(i).getText() , elementName.get(i));
-
         }
-
     }
-
-
 }
+
+    /*
+       Go to Market - take an interview - fail and one day you will have an success
+         Prepare your resume and be ready for the market.
+     */
+
+
+

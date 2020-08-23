@@ -11,10 +11,8 @@ public class Day1_04_Task2 {
 
      /*
         First create a task excel in the excel files package.
-
         Task2:
                 Print all the values in the task excel sheet.
-
      */
 
     public static void main(String[] args) {
@@ -55,6 +53,5 @@ public class Day1_04_Task2 {
 
             System.out.println(result);
         }
-
     }
 }

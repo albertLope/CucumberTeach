@@ -12,7 +12,6 @@ public class WriteInExcel2 {
 
     public static void excelWriteResults(String pathOfThExcel , String sheetName, Scenario scenario)  {
 
-
         FileInputStream inStream = null;
 
         try{
